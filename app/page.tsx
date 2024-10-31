@@ -38,29 +38,19 @@ const NailsPage = () => {
   const imagesPerView = 3;
 
   const fetchInstagramImages = async () => {
-    try {
-      const response = await fetch('/api/instagram', {
-        method: 'GET',
-        headers: {
-          'Accept': 'application/json',
-        },
-      });
+    const response = await fetch('/api/instagram', {
+      method: 'GET',
+      headers: {
+        'Accept': 'application/json',
+      },
+    });
 
-      if (!response.ok) {
-        throw new Error('Failed to fetch Instagram images');
-      }
-
-      const data = await response.json();
-      return data;
-    } catch (error) {
-      console.error('Error:', error);
-      return Array(9).fill({
-        id: String(Math.random()),
-        media_url: '/api/placeholder/400/400',
-        permalink: '#',
-        caption: 'Placeholder image'
-      });
+    if (!response.ok) {
+      throw new Error('Failed to fetch Instagram images');
     }
+
+    const data = await response.json();
+    return data;
   };
 
   useEffect(() => {
