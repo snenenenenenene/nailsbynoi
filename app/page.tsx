@@ -35,7 +35,19 @@ const BookNowButton = ({ className = "" }: { className?: string }) => (
 const NailsPage = () => {
   const [images, setImages] = useState<InstagramImage[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isScrolled, setIsScrolled] = useState(false);
   const imagesPerView = 3;
+
+  // Track scroll position
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      setIsScrolled(scrollPosition > 50); // Change state when scrolled more than 50px
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const fetchInstagramImages = async () => {
     const response = await fetch('/api/instagram', {
@@ -72,20 +84,22 @@ const NailsPage = () => {
   return (
     <main className="min-h-screen overflow-x-hidden">
       {/* Navigation */}
-      <div className="fixed top-0 left-0 right-0 z-50">
-        <nav className="w-full max-w-screen-xl mx-auto px-8 py-6">
+      <div className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out`}>
+        <nav className={`w-full max-w-screen-xl mx-auto px-8 transition-all duration-300 ease-in-out
+                        ${isScrolled ? 'py-3' : 'py-6'}`}>
           <div className="flex justify-between items-center">
             <Link href="/" className="items-center no-underline flex hover-scale">
               <Image
                 src="/images/logo.png"
                 alt="Noi Nails Logo"
-                width={180}
-                height={180}
-                className="mr-2"
+                width={isScrolled ? 140 : 180}
+                height={isScrolled ? 140 : 180}
+                className="mr-2 transition-all duration-300"
                 priority
               />
             </Link>
-            <BookNowButton className="hidden sm:inline-flex" />
+            <BookNowButton className={`hidden sm:inline-flex transition-all duration-300
+                                    ${isScrolled ? 'scale-90' : 'scale-100'}`} />
           </div>
         </nav>
       </div>
