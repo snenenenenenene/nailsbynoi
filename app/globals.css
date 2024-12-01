@@ -2,34 +2,124 @@
 @tailwind components;
 @tailwind utilities;
 
-@keyframes gradient {
-  0% {
-    background-position: 0% 50%;
+@layer base {
+  body {
+    @apply text-gray-900 bg-white antialiased;
   }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading;
   }
 }
 
-body {
-  background: linear-gradient(-45deg, 
-    #FFE5E5,
-    #FFC0CB,
-    #FFC0CB,
-    #FFF
-  );
-  background-size: 400% 400%;
-  animation: gradient 15s ease infinite;
-  color: #131520;
+/* Background Colors and Transitions */
+.manicure-colors {
+  --color-start: #fdb8c5;
+  --color-mid: #ffcad4;
+  --color-end: #ffc4d0;
 }
 
+.pedicure-colors {
+  --color-start: #ffffff;
+  --color-mid: #fff5f6;
+  --color-end: #ffffff;
+}
+
+/* Default root colors */
+:root {
+  --color-start: #ffffff;
+  --color-mid: #fff5f6;
+  --color-end: #ffffff;
+  --font-heading: var(--font-outfit);
+}
+
+/* Accessibility Improvements */
+:focus-visible {
+  @apply outline-none ring-2 ring-black ring-offset-2;
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Remove tap highlight on mobile */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* High contrast selection */
+::selection {
+  @apply bg-pink-200 text-gray-900;
+}
+
+/* Font Classes */
+.font-heading {
+  font-family: var(--font-heading);
+}
+
+/* Animation Classes */
 .hover-scale {
-  transition: transform 0.3s ease;
+  @apply transition-transform duration-300 hover:scale-[1.02];
 }
 
-.hover-scale:hover {
-  transform: scale(1.02);
+/* Image Gallery Styles */
+.gallery-grid {
+  @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4;
+}
+
+/* Button Styles */
+.btn-primary {
+  @apply inline-flex items-center px-6 py-3 bg-black text-white rounded-lg
+         hover:bg-gray-800 transition-all duration-300;
+}
+
+/* Container Styles */
+.container-custom {
+  @apply w-full max-w-screen-xl mx-auto px-8;
+}
+
+/* Section Spacing */
+.section-py {
+  @apply py-24;
+}
+
+/* Contact Links */
+.contact-link {
+  @apply text-gray-800 hover:text-black transition-colors;
+}
+
+/* Navigation Transitions */
+.nav-scroll-transition {
+  @apply transition-all duration-300 ease-in-out;
+}
+
+/* Image Hover Effects */
+.img-hover {
+  @apply hover:scale-[1.02] transition-all duration-500;
+}
+
+/* Backdrop Blur */
+.backdrop-blur-custom {
+  @apply backdrop-blur-sm;
+}
+
+/* Custom Shadows */
+.shadow-custom {
+  @apply shadow-lg;
+}
+
+/* Transitions */
+.transition-custom {
+  @apply transition-all duration-300;
+}
+
+/* Grid layouts */
+.grid-2-cols {
+  @apply grid sm:grid-cols-2 grid-cols-1 gap-16 items-center;
 }
