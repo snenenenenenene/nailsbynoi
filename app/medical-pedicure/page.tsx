@@ -167,7 +167,6 @@ export default function MedicalPedicurePage() {
 												alt={pageImages[index].alt}
 												fill
 												className="object-cover"
-												sizes="(max-width: 768px) 100vw, 33vw"
 												allPageImages={pageImages}
 												currentIndex={index}
 											/>
