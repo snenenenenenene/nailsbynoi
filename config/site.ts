@@ -11,7 +11,7 @@ export const siteConfig = {
       href: "/manicure",
     },
     {
-      title: "Medical Pedicure",
+      title: "Medische Pedicure",
       href: "/medical-pedicure",
     },
   ],

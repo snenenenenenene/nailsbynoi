@@ -1,8 +1,6 @@
 // components/navigation.tsx
 'use client';
 
-import { siteConfig } from '@/config/site';
-import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
@@ -19,26 +17,30 @@ export function Navigation() {
 
 	return (
 		<div className="fixed top-0 left-0 right-0 z-50">
-			<nav className={`w-full max-w-screen-xl mx-auto px-8 backdrop-blur-sm transition-[padding] duration-300 ${isScrolled ? 'py-3' : 'py-6'}`}>
-				<div className="flex space-x-8 items-center">
-					{siteConfig.mainNav.map((item) => (
+			<nav
+				className={`w-full max-w-screen-xl mx-auto px-8 backdrop-blur-sm transition-[padding] duration-300
+        ${isScrolled ? 'py-3' : 'py-6'}`}
+			>
+				<div className="flex justify-between items-center">
+					<div className="relative flex items-center space-x-4">
 						<Link
-							key={item.href}
-							href={item.href}
-							className="relative px-3 py-2 text-lg font-medium rounded-md"
+							href="/manicure"
+							className={`relative z-10 text-lg tracking-wide lowercase hover:text-black transition-colors
+              ${pathname === '/manicure' ? 'text-black' : 'text-gray-600'}`}
 						>
-							<span className="relative z-10 text-gray-800">
-								{item.title}
-							</span>
-							{pathname === item.href && (
-								<motion.div
-									className="absolute inset-0 bg-pink-100 -z-10"
-									layoutId="nav-indicator"
-									transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-								/>
-							)}
+							manicure
 						</Link>
-					))}
+
+						<span className="w-1 h-1 rounded-full bg-black/20" />
+
+						<Link
+							href="/medical-pedicure"
+							className={`relative z-10 text-lg tracking-wide lowercase hover:text-black transition-colors
+              ${pathname === '/medical-pedicure' ? 'text-black' : 'text-gray-600'}`}
+						>
+							medical pedicure
+						</Link>
+					</div>
 				</div>
 			</nav>
 		</div>

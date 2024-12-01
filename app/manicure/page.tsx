@@ -37,6 +37,19 @@ const CallButton = () => (
 	</a>
 );
 
+const InstagramButton = () => (
+	<a
+		href="https://www.instagram.com/nail_noi_salon"
+		target="_blank"
+		rel="noopener noreferrer"
+		className="inline-flex items-center px-6 py-3 bg-white text-black border border-black/10 
+				 rounded-lg hover:bg-black/5 transition-all duration-300 group"
+	>
+		<span>Instagram</span>
+		<Instagram className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" />
+	</a>
+);
+
 export default function ManicurePage() {
 	const [currentIndex, setCurrentIndex] = useState(0);
 	const imagesPerView = 3;
@@ -60,26 +73,17 @@ export default function ManicurePage() {
 				<div className="w-full max-w-screen-xl mx-auto px-8">
 					<div className="grid sm:grid-cols-2 grid-cols-1 gap-16 items-center">
 						<div className="max-w-[560px] space-y-6">
-							<div className="flex space-x-6">
-								<a
-									href="https://www.instagram.com/nail_noi_salon"
-									target="_blank"
-									rel="noopener noreferrer"
-									className="hover:opacity-70 transition-opacity"
-								>
-									<Instagram className="w-5 h-5" />
-								</a>
-							</div>
-							<div>
-								<h1 className="text-4xl sm:text-6xl font-light mb-4">
-									Manicure bij<br />
-									<span className="font-medium">{siteConfig.businessName}</span>
-								</h1>
-								<p className="text-lg text-gray-800 mb-8">
-									Ervaar luxe nagelverzorging in het hart van {siteConfig.location}. Gespecialiseerd in
-									natuurlijke nagelversteviging en artistieke designs met premium producten en technieken.
-								</p>
+							<h1 className="text-4xl sm:text-6xl font-light mb-4">
+								Manicure bij<br />
+								<span className="font-medium">{siteConfig.businessName}</span>
+							</h1>
+							<p className="text-lg text-gray-800 mb-8">
+								Ervaar luxe nagelverzorging in het hart van {siteConfig.location}. Gespecialiseerd in
+								natuurlijke nagelversteviging en artistieke designs met premium producten en technieken.
+							</p>
+							<div className="flex items-center space-x-4">
 								<CallButton />
+								<InstagramButton />
 							</div>
 						</div>
 						<div className="max-w-[560px]">

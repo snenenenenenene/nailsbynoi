@@ -3,13 +3,14 @@
 
 import { ClickableImage } from '@/components/clickable-image';
 import { siteConfig } from '@/config/site';
-import { Mail, MapPin, Phone } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Mail, MapPin, Phone } from 'lucide-react';
+import { useState } from 'react';
 
-const pageImages = [
-	{ src: "/images/pedicure1.jpg", alt: "Medical Pedicure Studio" },
-	{ src: "/images/pedicure2.jpg", alt: "Medische Pedicure Behandeling" },
-	{ src: "/images/pedicure3.jpg", alt: "Pedicure Salon Interieur" }
-];
+// Define all page images
+const pageImages = Array.from({ length: 9 }, (_, i) => ({
+	src: `/images/pedicure/pedicure${i + 1}.jpg`,
+	alt: `Medical Pedicure - ${i + 1}`
+}));
 
 const CallButton = () => (
 	<a
@@ -23,6 +24,21 @@ const CallButton = () => (
 );
 
 export default function MedicalPedicurePage() {
+	const [currentIndex, setCurrentIndex] = useState(0);
+	const imagesPerView = 3;
+
+	const nextSlide = () => {
+		setCurrentIndex((prev) =>
+			prev + imagesPerView >= pageImages.length ? 0 : prev + imagesPerView
+		);
+	};
+
+	const prevSlide = () => {
+		setCurrentIndex((prev) =>
+			prev - imagesPerView < 0 ? Math.max(0, pageImages.length - imagesPerView) : prev - imagesPerView
+		);
+	};
+
 	return (
 		<>
 			{/* Hero Section */}
@@ -45,14 +61,14 @@ export default function MedicalPedicurePage() {
 							<div className="relative">
 								<div className="rounded-2xl overflow-hidden shadow-lg hover:scale-[1.02] transition-all duration-500">
 									<ClickableImage
-										src="/images/pedicure1.jpg"
-										alt="Medical Pedicure Studio"
+										src="/images/pedicure/pedicure6.jpg"
+										alt="Medical Pedicure Hero"
 										width={560}
 										height={560}
 										className="w-full"
 										priority
 										allPageImages={pageImages}
-										currentIndex={0}
+										currentIndex={5}
 									/>
 								</div>
 							</div>
@@ -61,31 +77,48 @@ export default function MedicalPedicurePage() {
 				</div>
 			</section>
 
-			{/* Services Section */}
+			{/* Procedures Section */}
 			<section className="py-24">
 				<div className="w-full max-w-screen-xl mx-auto px-8">
-					<div className="grid sm:grid-cols-2 grid-cols-1 gap-16 items-center">
-						<div className="space-y-6">
+					<div className="grid sm:grid-cols-2 grid-cols-1 gap-16 items-start">
+						<div className="space-y-8">
 							<h2 className="text-3xl sm:text-4xl font-medium mb-6">
-								Medische Voetverzorging
+								Behandelingen
 							</h2>
-							<div className="space-y-4 text-gray-800">
-								<p>
-									Bij {siteConfig.businessName} bieden wij professionele medische pedicure
-									behandelingen aan. Onze expertise omvat het behandelen van diverse voetproblemen
-									en het bieden van preventieve zorg.
-								</p>
-								<p>
-									We gebruiken uitsluitend hoogwaardige instrumenten en volgen de strengste
-									hygiënevoorschriften. Elke behandeling wordt aangepast aan uw specifieke
-									behoeften en situatie.
-								</p>
+
+							<div className="space-y-6">
+								<div className="space-y-2">
+									<h3 className="text-xl font-medium">Basis Medische Pedicure</h3>
+									<p className="text-gray-800">Complete voetverzorging inclusief nagels knippen,
+										eelt verwijderen, en behandeling van klachten zoals likdoorns of ingegroeide nagels.</p>
+								</div>
+
+								<div className="space-y-2">
+									<h3 className="text-xl font-medium">Specialistische Schimmelbehandeling</h3>
+									<p className="text-gray-800">Professionele behandeling van schimmelnagels met
+										speciale aandacht voor preventie en nazorg adviezen.</p>
+								</div>
+
+								<div className="space-y-2">
+									<h3 className="text-xl font-medium">Diabetische Voetzorg</h3>
+									<p className="text-gray-800">Aangepaste voetverzorging voor diabetespatiënten
+										met extra aandacht voor risicopreventie en wondcontrole.</p>
+								</div>
+
+								<div className="mt-8 text-gray-800">
+									<p>Neem telefonisch contact op voor meer informatie over onze behandelingen
+										en een persoonlijk advies voor uw specifieke situatie.</p>
+									<div className="mt-4">
+										<CallButton />
+									</div>
+								</div>
 							</div>
 						</div>
+
 						<div className="rounded-2xl overflow-hidden shadow-lg hover:scale-[1.02] transition-all duration-500">
 							<ClickableImage
-								src="/images/pedicure2.jpg"
-								alt="Medische Pedicure Behandeling"
+								src={pageImages[1].src}
+								alt={pageImages[1].alt}
 								width={2000}
 								height={1}
 								className="w-full h-[600px] object-cover"
@@ -93,6 +126,66 @@ export default function MedicalPedicurePage() {
 								currentIndex={1}
 							/>
 						</div>
+					</div>
+				</div>
+			</section>
+
+			{/* Gallery Section */}
+			<section className="py-24" id="images">
+				<div className="w-full max-w-screen-xl mx-auto px-8">
+					<div className="text-center mb-16 space-y-4">
+						<h2 className="text-3xl sm:text-4xl font-medium">Galerij</h2>
+						<p className="text-gray-800">Bekijk onze faciliteiten en behandelingen</p>
+					</div>
+
+					<div className="flex items-center gap-4">
+						<button
+							onClick={prevSlide}
+							className="p-2 rounded-lg bg-black/5 hover:bg-black/10 transition-colors
+                       disabled:opacity-50 disabled:cursor-not-allowed"
+							disabled={currentIndex === 0}
+							aria-label="Vorige slide"
+						>
+							<ChevronLeft className="h-6 w-6" />
+						</button>
+
+						<div className="overflow-hidden flex-grow">
+							<div
+								className="flex transition-transform duration-500 ease-in-out"
+								style={{ transform: `translateX(-${currentIndex * (100 / imagesPerView)}%)` }}
+							>
+								{[2, 3, 4, 5, 7, 8].map((index) => (
+									<div
+										key={index}
+										className="sm:flex-[0_0_calc(33.33%-8px)] flex-[0_0_calc(100%-10px)] 
+                             min-w-0 mx-1.5 first:ml-0 last:mr-0"
+									>
+										<div className="block relative aspect-[4/3] rounded-lg overflow-hidden shadow-lg
+                                hover:scale-[1.02] transition-all duration-500">
+											<ClickableImage
+												src={pageImages[index].src}
+												alt={pageImages[index].alt}
+												fill
+												className="object-cover"
+												sizes="(max-width: 768px) 100vw, 33vw"
+												allPageImages={pageImages}
+												currentIndex={index}
+											/>
+										</div>
+									</div>
+								))}
+							</div>
+						</div>
+
+						<button
+							onClick={nextSlide}
+							className="p-2 rounded-lg bg-black/5 hover:bg-black/10 transition-colors
+                       disabled:opacity-50 disabled:cursor-not-allowed"
+							disabled={currentIndex + imagesPerView >= 6} // 6 images in total in the gallery
+							aria-label="Volgende slide"
+						>
+							<ChevronRight className="h-6 w-6" />
+						</button>
 					</div>
 				</div>
 			</section>
@@ -149,13 +242,13 @@ export default function MedicalPedicurePage() {
 
 						<div className="rounded-2xl overflow-hidden shadow-lg hover:scale-[1.02] transition-all duration-500">
 							<ClickableImage
-								src="/images/pedicure3.jpg"
-								alt="Pedicure Salon Interieur"
+								src={pageImages[0].src}
+								alt={pageImages[0].alt}
 								width={800}
 								height={800}
 								className="w-full h-[600px] object-cover"
 								allPageImages={pageImages}
-								currentIndex={2}
+								currentIndex={0}
 							/>
 						</div>
 					</div>
