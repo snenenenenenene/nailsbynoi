@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 // components/clickable-image.tsx
 "use client";
 
@@ -22,9 +23,7 @@ export function ClickableImage({
 	alt,
 	width,
 	height,
-	fill,
 	className,
-	priority,
 	allPageImages,
 	currentIndex
 }: ClickableImageProps) {
@@ -47,9 +46,7 @@ export function ClickableImage({
 					alt={alt}
 					width={width}
 					height={height}
-					fill={fill}
 					className={className}
-					priority={priority}
 				/>
 			</div>
 
