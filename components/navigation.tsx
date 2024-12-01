@@ -38,7 +38,7 @@ export function Navigation() {
 							className={`relative z-10 text-lg tracking-wide lowercase hover:text-black transition-colors
               ${pathname === '/medical-pedicure' ? 'text-black' : 'text-gray-600'}`}
 						>
-							medical pedicure
+							medische pedicure
 						</Link>
 					</div>
 				</div>
