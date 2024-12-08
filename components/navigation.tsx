@@ -23,22 +23,22 @@ export function Navigation() {
 			>
 				<div className="flex justify-between items-center">
 					<div className="relative flex items-center space-x-4">
-						<Link
-							href="/manicure"
-							className={`relative z-10 text-lg tracking-wide lowercase hover:text-black transition-colors
-              ${pathname === '/manicure' ? 'text-black' : 'text-gray-600'}`}
-						>
-							manicure
-						</Link>
-
-						<span className="w-1 h-1 rounded-full bg-black/20" />
-
+					
 						<Link
 							href="/medical-pedicure"
 							className={`relative z-10 text-lg tracking-wide lowercase hover:text-black transition-colors
               ${pathname === '/medical-pedicure' ? 'text-black' : 'text-gray-600'}`}
 						>
 							medische pedicure
+						</Link>
+						<span className="w-1 h-1 rounded-full bg-black/20" />
+
+						<Link
+							href="/manicure"
+							className={`relative z-10 text-lg tracking-wide lowercase hover:text-black transition-colors
+              ${pathname === '/manicure' ? 'text-black' : 'text-gray-600'}`}
+						>
+							manicure
 						</Link>
 					</div>
 				</div>

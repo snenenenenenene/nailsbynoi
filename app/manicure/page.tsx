@@ -74,11 +74,10 @@ export default function ManicurePage() {
 					<div className="grid sm:grid-cols-2 grid-cols-1 gap-16 items-center">
 						<div className="max-w-[560px] space-y-6">
 							<h1 className="text-4xl sm:text-6xl font-light mb-4">
-								Manicure bij<br />
 								<span className="font-medium">{siteConfig.businessName}</span>
 							</h1>
 							<p className="text-lg text-gray-800 mb-8">
-								Ervaar luxe nagelverzorging in het hart van {siteConfig.location}. Gespecialiseerd in
+								Ervaar nagelverzorging in het hart van {siteConfig.location}. Gespecialiseerd in
 								natuurlijke nagelversteviging en artistieke designs met premium producten en technieken.
 							</p>
 							<div className="flex items-center space-x-4">
@@ -131,7 +130,7 @@ export default function ManicurePage() {
 								</p>
 								<p>
 									Onze diensten omvatten gelmanicures, signature nail art, natuurlijke nagelverzorging,
-									en luxe behandelingen. Ik gebruik alleen premium producten die uw natuurlijke
+									en behandelingen. Ik gebruik alleen premium producten die uw natuurlijke
 									nagels beschermen en versterken.
 								</p>
 							</div>
@@ -206,7 +205,7 @@ export default function ManicurePage() {
 						<div className="space-y-12">
 							<div>
 								<h2 className="text-3xl sm:text-4xl font-medium mb-6">Neem Contact Op</h2>
-								<p className="text-gray-800">Ervaar luxe nagelverzorging in {siteConfig.location}</p>
+								<p className="text-gray-800">Ervaar nagelverzorging in {siteConfig.location}</p>
 							</div>
 
 							<div className="space-y-8">

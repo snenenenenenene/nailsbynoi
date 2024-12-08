@@ -47,7 +47,6 @@ export default function MedicalPedicurePage() {
 					<div className="grid sm:grid-cols-2 grid-cols-1 gap-16 items-center">
 						<div className="max-w-[560px] space-y-6">
 							<h1 className="text-4xl sm:text-6xl font-light mb-4">
-								Pedicure bij<br />
 								<span className="font-medium">{siteConfig.businessName}</span>
 							</h1>
 							<p className="text-lg text-gray-800 mb-8">

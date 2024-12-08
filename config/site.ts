@@ -1,10 +1,10 @@
 // config/site.ts
 export const siteConfig = {
-  businessName: "Noi Manicure & Medische Pedicure",
+  businessName: "Noi Medische Pedicure & Manicure",
   phone: "0484767586",
-  email: "nail.noi.salon@gmail.com",
+  email: "noi.pedicure.manicure@gmail.com",
   location: "Brasschaat",
-  url: "https://noi_manicure.com",
+  url: "https://noi-pedicure-manicure.com",
   mainNav: [
     {
       title: "Manicure",
