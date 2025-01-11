@@ -112,28 +112,23 @@ export default function ManicurePage() {
 							<ClickableImage
 								src="/images/about.jpg"
 								alt="Ons salon - Premium nagelverzorging in Brasschaat"
-								width={2000}
+								width={1600}
 								height={1}
-								className="w-full h-[600px] object-cover"
+								className="w-full h-[400px] object-cover object-bottom"
 								allPageImages={pageImages}
 								currentIndex={1}
 							/>
 						</div>
 						<div className="space-y-6">
 							<h2 className="text-3xl sm:text-4xl font-medium mb-6">
-								Uw Premium Nagelverzorging Bestemming
+								Behandelingen
 							</h2>
 							<div className="space-y-4 text-gray-800">
-								<p>
-									Bij {siteConfig.businessName} geloof ik in het versterken van uw natuurlijke schoonheid
-									door deskundige nagelverzorging. Onze ervaren specialisten zijn gespecialiseerd
-									in natuurlijke nagelversteviging, artistieke designs en premium behandelingen.
-								</p>
-								<p>
-									Onze diensten omvatten gelmanicures, signature nail art, natuurlijke nagelverzorging,
-									en behandelingen. Ik gebruik alleen premium producten die uw natuurlijke
-									nagels beschermen en versterken.
-								</p>
+								<ul className="list-disc list-inside space-y-2">
+									<li>Gellak</li>
+									<li>Verlenging</li>
+									<li>Bijwerken nagelriemen</li>
+								</ul>
 							</div>
 						</div>
 					</div>
