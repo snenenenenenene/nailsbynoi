@@ -8,7 +8,7 @@ import { useState } from 'react';
 
 // Define all page images
 const pageImages = Array.from({ length: 9 }, (_, i) => ({
-	src: `/images/pedicure/pedicure${i + 1}.jpg`,
+	src: `/images/pedicure/pedicure${i + 1}.JPG`,
 	alt: `Medical Pedicure - ${i + 1}`
 }));
 
