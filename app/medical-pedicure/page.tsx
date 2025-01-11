@@ -46,9 +46,10 @@ export default function MedicalPedicurePage() {
 				<div className="w-full max-w-screen-xl mx-auto px-8">
 					<div className="grid sm:grid-cols-2 grid-cols-1 gap-16 items-center">
 						<div className="max-w-[560px] space-y-6">
-							<h1 className="text-4xl sm:text-6xl font-light mb-4">
-								<span className="font-medium">{siteConfig.businessName}</span>
-							</h1>
+							<div className="space-y-2">
+								<h1 className="text-4xl sm:text-6xl font-medium">Noi Medische Pedicure</h1>
+								<div className="text-lg font-light">Aan huis</div>
+							</div>
 							<p className="text-lg text-gray-800 mb-8">
 								Professionele voetverzorging met medische expertise. Ik bied
 								gespecialiseerde behandelingen voor diverse voetproblemen met de hoogste
@@ -59,7 +60,7 @@ export default function MedicalPedicurePage() {
 							<div className="relative">
 								<div className="rounded-2xl overflow-hidden shadow-lg hover:scale-[1.02] transition-all duration-500">
 									<ClickableImage
-										src="/images/pedicure/pedicure6.jpg"
+										src="/images/pedicure/pedicure6.JPG"
 										alt="Medical Pedicure Hero"
 										width={560}
 										height={560}

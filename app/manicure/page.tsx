@@ -73,9 +73,10 @@ export default function ManicurePage() {
 				<div className="w-full max-w-screen-xl mx-auto px-8">
 					<div className="grid sm:grid-cols-2 grid-cols-1 gap-16 items-center">
 						<div className="max-w-[560px] space-y-6">
-							<h1 className="text-4xl sm:text-6xl font-light mb-4">
-								<span className="font-medium">{siteConfig.businessName}</span>
-							</h1>
+							<div className="space-y-2">
+								<h1 className="text-4xl sm:text-6xl font-medium">Noi Manicure</h1>
+								<div className="text-lg font-light">Aan huis</div>
+							</div>
 							<p className="text-lg text-gray-800 mb-8">
 								Ervaar nagelverzorging in het hart van {siteConfig.location}. Gespecialiseerd in
 								natuurlijke nagelversteviging en artistieke designs met premium producten en technieken.
