@@ -6,6 +6,7 @@ import { siteConfig } from '@/config/site';
 import type { Metadata } from 'next';
 import { inter, outfit } from './fonts';
 import './globals.css';
+import { Analytics } from "@vercel/analytics/react"
 
 export const metadata: Metadata = {
   title: {
@@ -56,6 +57,7 @@ export default function RootLayout({
       className={`${inter.variable} ${outfit.variable}`}
     >
       <body className={`antialiased ${inter.className} min-h-screen`}>
+        <Analytics />
         <Background />
         <Navigation />
         {children}
