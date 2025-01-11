@@ -25,15 +25,15 @@
 }
 
 .pedicure-colors {
-  --color-start: #dcfce7;
-  --color-mid: #f0fdf4;
-  --color-end: #dcfce7;
+  --color-start: #d8e7ed;
+  --color-mid: #d8e7ed;
+  --color-end: #d8e7ed;
 }
 
 /* Default root colors */
 :root {
   --color-start: #ffffff;
-  --color-mid: #fff5f6;
+  --color-mid: #d8e7ed;
   --color-end: #ffffff;
   --font-heading: var(--font-outfit);
 }
@@ -55,7 +55,7 @@ html {
 
 /* High contrast selection */
 ::selection {
-  @apply bg-pink-200 text-gray-900;
+  @apply bg-sky-100 text-gray-900;
 }
 
 /* Font Classes */

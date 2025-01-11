@@ -15,8 +15,8 @@ const pageImages = Array.from({ length: 9 }, (_, i) => ({
 const CallButton = () => (
 	<a
 		href={`tel:${siteConfig.phone}`}
-		className="inline-flex items-center px-6 py-3 bg-emerald-600 text-white rounded-lg
-             hover:bg-emerald-700 transition-all duration-300 group"
+		className="inline-flex items-center px-6 py-3 bg-black text-white rounded-lg
+             hover:bg-gray-800 transition-all duration-300 group"
 	>
 		<span>Bel Nu</span>
 		<Phone className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" />
@@ -40,7 +40,7 @@ export default function MedicalPedicurePage() {
 	};
 
 	return (
-		<div className="bg-emerald-50">
+		<div>
 			{/* Hero Section */}
 			<section className="py-24" id="hero">
 				<div className="w-full max-w-screen-xl mx-auto px-8">
@@ -127,7 +127,7 @@ export default function MedicalPedicurePage() {
 					<div className="flex items-center gap-4">
 						<button
 							onClick={prevSlide}
-							className="p-2 rounded-lg bg-emerald-100 hover:bg-emerald-200 transition-colors
+							className="p-2 rounded-lg bg-black/5 hover:bg-black/10 transition-colors
                        disabled:opacity-50 disabled:cursor-not-allowed"
 							disabled={currentIndex === 0}
 							aria-label="Vorige slide"
@@ -164,7 +164,7 @@ export default function MedicalPedicurePage() {
 
 						<button
 							onClick={nextSlide}
-							className="p-2 rounded-lg bg-emerald-100 hover:bg-emerald-200 transition-colors
+							className="p-2 rounded-lg bg-black/5 hover:bg-black/10 transition-colors
                        disabled:opacity-50 disabled:cursor-not-allowed"
 							disabled={currentIndex + imagesPerView >= 6}
 							aria-label="Volgende slide"

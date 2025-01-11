@@ -1,5 +1,6 @@
 // app/layout.tsx
 import { Background } from '@/components/background';
+import { DevelopmentBanner } from '@/components/development-banner';
 import { Footer } from '@/components/footer';
 import { Navigation } from '@/components/navigation';
 import { siteConfig } from '@/config/site';
@@ -60,6 +61,7 @@ export default function RootLayout({
         <Navigation />
         {children}
         <Footer />
+        <DevelopmentBanner />
       </body>
     </html>
   );
