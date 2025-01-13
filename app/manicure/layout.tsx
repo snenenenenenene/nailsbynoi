@@ -19,7 +19,7 @@ export default async function ManicureLayout({ children }: ManicureLayoutProps) 
 			itemType="http://schema.org/BeautySalon"
 		>
 			<meta itemProp="name" content={siteConfig.businessName} />
-			<meta itemProp="description" content="Luxueuze manicure en nagelverzorging in Brasschaat" />
+			<meta itemProp="description" content="Luxueuze manicure en nagelverzorging uit Brasschaat" />
 			<meta itemProp="address" content={siteConfig.location} />
 			<meta itemProp="telephone" content={siteConfig.phone} />
 			{children}

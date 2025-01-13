@@ -13,8 +13,12 @@ export const metadata: Metadata = {
     default: siteConfig.businessName,
     template: `%s | ${siteConfig.businessName}`,
   },
-  description: "Professionele nagelverzorging en medische pedicure in Brasschaat. Vakkundige behandelingen met premium producten.",
-  keywords: ["manicure", "pedicure", "nagelverzorging", "medische pedicure", "Brasschaat", "nagelstudio", "nagelsalon"],
+  description: "Professionele nagelverzorging en medische pedicure uit Brasschaat. Vakkundige behandelingen met premium producten. Service in Brasschaat, Schilde, Schoten, Ekeren, Kapellen en Merksem.",
+  keywords: [
+    "manicure", "pedicure", "nagelverzorging", "medische pedicure",
+    "Brasschaat", "Schilde", "Schoten", "Ekeren", "Kapellen", "Merksem",
+    "nagelstudio", "nagelsalon", "pedicure aan huis", "manicure aan huis"
+  ],
   authors: [{ name: siteConfig.businessName }],
   creator: siteConfig.businessName,
   openGraph: {
@@ -22,13 +26,13 @@ export const metadata: Metadata = {
     locale: 'nl_BE',
     url: siteConfig.url,
     title: siteConfig.businessName,
-    description: "Professionele nagelverzorging en medische pedicure in Brasschaat",
+    description: "Professionele nagelverzorging en medische pedicure uit Brasschaat. Service in Brasschaat, Schilde, Schoten, Ekeren, Kapellen en Merksem.",
     siteName: siteConfig.businessName,
   },
   twitter: {
     card: 'summary_large_image',
     title: siteConfig.businessName,
-    description: "Professionele nagelverzorging en medische pedicure in Brasschaat",
+    description: "Professionele nagelverzorging en medische pedicure uit Brasschaat. Service in Brasschaat, Schilde, Schoten, Ekeren, Kapellen en Merksem.",
   },
   robots: {
     index: true,

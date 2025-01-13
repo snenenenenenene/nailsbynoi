@@ -86,18 +86,25 @@ export default function MedicalPedicurePage() {
 							</h2>
 
 							<div className="space-y-6">
-								<div className="space-y-4">
+								<div className="space-y-8">
 									<ul className="list-disc list-inside space-y-2 text-gray-800">
-										<li>Knippen</li>
-										<li>Vijlen</li>
-										<li>Nagelriemen en ingegroeide nagels</li>
-										<li>Eelt verwijderen</li>
+										<li>Desinfecterende lotion</li>
+										<li>Knippen en vijlen</li>
+										<li>Kloven</li>
+										<li>Ingegroeide nagels</li>
+										<li>Likdoorns</li>
+										<li>Schimmel- en kalknagels</li>
+										<li>Massage</li>
+										<li>Voetcrème</li>
 									</ul>
-								</div>
 
-								<div className="mt-8 text-gray-800">
-									<p>Neem telefonisch contact op voor meer informatie over onze behandelingen
-										en een persoonlijk advies voor uw specifieke situatie.</p>
+									<div className="space-y-2">
+										<h3 className="text-xl font-medium">Prijzen</h3>
+										<ul className="list-none space-y-1">
+											<li>Pedicure basis: €35</li>
+											<li>Extra behandelingen te bespreken bij eerste bezien</li>
+										</ul>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -183,7 +190,7 @@ export default function MedicalPedicurePage() {
 						<div className="space-y-12">
 							<div>
 								<h2 className="text-3xl sm:text-4xl font-medium mb-6">Maak Een Afspraak</h2>
-								<p className="text-gray-800">Professionele voetverzorging in {siteConfig.location}</p>
+								<p className="text-gray-800">Professionele voetverzorging uit {siteConfig.location}</p>
 							</div>
 
 							<div className="space-y-8">
@@ -191,10 +198,7 @@ export default function MedicalPedicurePage() {
 									<MapPin className="w-5 h-5 mr-4 text-gray-800 group-hover:text-black transition-colors" />
 									<div>
 										<h3 className="font-medium mb-1">Locatie</h3>
-										<a href="https://maps.google.com" target="_blank" rel="noopener noreferrer"
-											className="text-gray-800 hover:text-black transition-colors">
-											{siteConfig.location}
-										</a>
+										<p className="text-gray-800">Brasschaat, Schilde, Schoten, Ekeren, Kapellen, Merksem</p>
 									</div>
 								</div>
 

@@ -5,7 +5,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Medical Pedicure | Professionele Voetverzorging",
   description:
-    "Specialistische medische pedicure in Brasschaat. Professionele voetverzorging met aandacht voor uw gezondheid en comfort.",
+    "Specialistische medische pedicure uit Brasschaat. Professionele voetverzorging met aandacht voor uw gezondheid en comfort.",
   keywords: [
     "medical pedicure",
     "medische voetverzorging",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: `Medical Pedicure | ${siteConfig.businessName}`,
     description:
-      "Specialistische medische pedicure in Brasschaat. Professionele voetverzorging met aandacht voor uw gezondheid.",
+      "Specialistische medische pedicure uit Brasschaat. Professionele voetverzorging met aandacht voor uw gezondheid.",
     url: `${siteConfig.url}/medical-pedicure`,
     type: "website",
   },

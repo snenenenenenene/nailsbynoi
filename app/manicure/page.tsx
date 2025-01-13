@@ -9,7 +9,7 @@ import { useState } from 'react';
 // Define all page images (static content)
 const pageImages = [
 	{ src: "/images/nails1.jpg", alt: "Noi Manicure Studio - Professionele nagelbehandeling" },
-	{ src: "/images/about.jpg", alt: "Ons salon - Premium nagelverzorging in Brasschaat" },
+	{ src: "/images/about.jpg", alt: "Ons salon - Premium nagelverzorging uit Brasschaat" },
 	{ src: "/images/nails9.jpg", alt: "Salon Interieur - Moderne en comfortabele omgeving" }
 ];
 
@@ -78,7 +78,7 @@ export default function ManicurePage() {
 								<div className="text-lg font-light">Aan huis</div>
 							</div>
 							<p className="text-lg text-gray-800 mb-8">
-								Ervaar nagelverzorging in het hart van {siteConfig.location}. Gespecialiseerd in
+								Ervaar nagelverzorging uit {siteConfig.location}. Gespecialiseerd in
 								natuurlijke nagelversteviging en artistieke designs met premium producten en technieken.
 							</p>
 							<div className="flex items-center space-x-4">
@@ -111,7 +111,7 @@ export default function ManicurePage() {
 						<div className="rounded-2xl overflow-hidden shadow-lg hover:scale-[1.02] transition-all duration-500">
 							<ClickableImage
 								src="/images/about.jpg"
-								alt="Ons salon - Premium nagelverzorging in Brasschaat"
+								alt="Ons salon - Premium nagelverzorging uit Brasschaat"
 								width={1600}
 								height={1}
 								className="w-full h-[400px] object-cover object-bottom"
@@ -123,12 +123,25 @@ export default function ManicurePage() {
 							<h2 className="text-3xl sm:text-4xl font-medium mb-6">
 								Behandelingen
 							</h2>
-							<div className="space-y-4 text-gray-800">
+							<div className="space-y-8 text-gray-800">
 								<ul className="list-disc list-inside space-y-2">
-									<li>Gellak</li>
-									<li>Verlenging</li>
-									<li>Bijwerken nagelriemen</li>
+									<li>Knippen en vijlen</li>
+									<li>Verlengen</li>
+									<li>Nagelriemen</li>
+									<li>Lakken</li>
+									<li>Gelnagels</li>
+									<li>Afhalen</li>
+									<li>Massage</li>
 								</ul>
+
+								<div className="space-y-2">
+									<h3 className="text-xl font-medium">Prijzen</h3>
+									<ul className="list-none space-y-1">
+										<li>Manicure: €30</li>
+										<li>Lakken: +€10</li>
+										<li>Gelnagels: +€15</li>
+									</ul>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -209,10 +222,7 @@ export default function ManicurePage() {
 									<MapPin className="w-5 h-5 mr-4 text-gray-800 group-hover:text-black transition-colors" />
 									<div>
 										<h3 className="font-medium mb-1">Locatie</h3>
-										<a href="https://maps.google.com" target="_blank" rel="noopener noreferrer"
-											className="text-gray-800 hover:text-black transition-colors">
-											{siteConfig.location}
-										</a>
+										<p className="text-gray-800">Brasschaat, Schilde, Schoten, Ekeren, Kapellen, Merksem</p>
 									</div>
 								</div>
 
