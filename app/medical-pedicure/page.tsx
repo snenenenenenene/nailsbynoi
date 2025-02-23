@@ -102,7 +102,7 @@ export default function MedicalPedicurePage() {
 										<h3 className="text-xl font-medium">Prijzen</h3>
 										<ul className="list-none space-y-1">
 											<li>Pedicure basis: €35</li>
-											<li>Extra behandelingen te bespreken bij eerste bezien</li>
+											<li>Extra behandelingen te bespreken bij eerste afspraak</li>
 										</ul>
 									</div>
 								</div>
